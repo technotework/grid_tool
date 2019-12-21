@@ -1,0 +1,15 @@
+{
+  "name": "gridtool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ws": "ws",
+    "serve": "npm run ws"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "local-web-server": "^3.0.7"
+  }
+}

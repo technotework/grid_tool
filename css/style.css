@@ -1,0 +1,40 @@
+body {
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+    padding-bottom: 24px;
+}
+
+#control {
+
+    margin: 24px;
+}
+
+
+#sample {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+#sample li {
+
+    list-style: none;
+    background-color: #cccccc;
+    font-size: 10px;
+    height: 400px;
+}
+
+#sample li:nth-child(odd) {
+
+    background-color: #dddddd;
+}
+
+.formItem {
+
+    padding-bottom: 16px;
+}

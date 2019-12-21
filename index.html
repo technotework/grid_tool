@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Grid Tool</title>
+  <link rel="stylesheet" href="css/html5reset-1.6.1.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="app">
+
+    <div id="control">
+      <h1>Grid Tool</h1>
+      <div class="formItem">
+        <label for="basefont">ベースフォントサイズ
+          <input type="number" name="basefont" id="basefont" v-model.number="fontSize" />
+        </label> px
+      </div>
+      <div class="formItem">
+        <label for="gapNum">ギャップ文字数
+          <input type="number" name="gapTextNum" id="gapTextNum" v-model.number="gapTextNum" />
+        </label>rem
+      </div>
+      <div class="formItem">
+        <label for="typeRem">
+          <input type="radio" name="gridWidthType" value="rem" id="typeRem" v-model="gridWidthType" />rem
+        </label>
+
+        <label for="typePx">
+          <input type="radio" name="gridWidthType" value="px" id="typePx" v-model="gridWidthType" />px
+        </label>
+
+        <template v-if="gridWidthTypes === 'rem'">
+
+          <input type="number" name="gridTextNum" id="gridTextNum" v-model.number="gridTextNum" /> rem
+
+        </template>
+        <template v-else>
+
+          <input type="number" name="gridPxNum" id="gridPxNum" v-model.number="gridPxNum" /> px
+        </template>
+      </div>
+      <div class="formItem">
+        <label for="gridNum">グリッド数
+          <input type="number" name="gridNum" id="gridNum" v-model.number="gridNum" />
+        </label>
+      </div>
+      <div class="formItem">
+        <label for="total">合計
+          <input type="text" name="total" id="total" v-model.number="total" />
+        </label>
+      </div>
+    </div>
+    <ul id="sample">
+      <li v-for="n in gridNums" v-bind:style="{width:gridWidth+'px', marginRight:gapWidth+'px'}">{{gridWidth}}</li>
+
+    </ul>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
