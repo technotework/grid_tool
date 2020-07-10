@@ -16,16 +16,16 @@
     <div id="control">
       <h1>Grid Tool</h1>
       <div class="formItem">
-        <label for="basefont">ベースフォントサイズ
+        <label for="basefont"><span class="labelText">ベースフォントサイズ</span>
           <input type="number" name="basefont" id="basefont" v-model.number="fontSize" />
         </label> px
       </div>
       <div class="formItem">
-        <label for="gapNum">ギャップ文字数
+        <label for="gapNum"><span class="labelText">ギャップ文字数</span>
           <input type="number" name="gapTextNum" id="gapTextNum" v-model.number="gapTextNum" />
         </label>rem
       </div>
-      <div class="formItem">
+      <div class="formItem"><span class="labelText">グリッドの単位</span>
         <label for="typeRem">
           <input type="radio" name="gridWidthType" value="rem" id="typeRem" v-model="gridWidthType" />rem
         </label>
@@ -45,18 +45,17 @@
         </template>
       </div>
       <div class="formItem">
-        <label for="gridNum">グリッド数
+        <label for="gridNum"><span class="labelText">グリッド数</span>
           <input type="number" name="gridNum" id="gridNum" v-model.number="gridNum" />
         </label>
       </div>
       <div class="formItem">
-        <label for="total">合計
-          <input type="text" name="total" id="total" v-model.number="total" />
-        </label>
+        <span class="labelText">横幅合計</span> {{total}} px
+        
       </div>
     </div>
     <ul id="sample">
-      <li v-for="n in gridNums" v-bind:style="{width:gridWidth+'px', marginRight:gapWidth+'px'}">{{gridWidth}}</li>
+      <li v-for="n in gridNums" v-bind:style="{width:gridWidth+'px', marginRight:gapWidth+'px'}">{{gridWidth}}<br />px</li>
 
     </ul>
 
