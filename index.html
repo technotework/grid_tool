@@ -51,12 +51,15 @@
       </div>
       <div class="formItem">
         <span class="labelText">横幅合計</span> {{total}} px
-        
       </div>
     </div>
     <ul id="sample">
-      <li v-for="n in gridNums" v-bind:style="{width:gridWidth+'px', marginRight:gapWidth+'px'}">{{gridWidth}}<br />px</li>
-
+      <li v-for="n in gridNums" v-bind:style="{width:gridWidth+'px', marginRight:gapWidth+'px'}">
+      <template v-if="gridWidthTypes === 'rem'">
+        {{gridTextNum}}<br />rem <br /><br />
+       </template>
+       {{gridWidth}}<br />px
+      </li>
     </ul>
 
   </div>
