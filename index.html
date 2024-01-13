@@ -12,7 +12,6 @@
 
 <body>
   <div id="app">
-
     <div id="control">
       <h1>Grid Tool</h1>
       <div class="formItem">
@@ -55,10 +54,10 @@
     </div>
     <ul id="sample">
       <li v-for="n in gridNums" v-bind:style="{width:gridWidth+'px', marginRight:gapWidth+'px'}">
-      <template v-if="gridWidthTypes === 'rem'">
-        {{gridTextNum}}<br />rem <br /><br />
-       </template>
-       {{gridWidth}}<br />px
+        <template v-if="gridWidthTypes === 'rem'">
+          {{gridTextNum}}<br />rem <br /><br />
+        </template>
+        {{gridWidth}}<br />px
       </li>
     </ul>
   </div>
